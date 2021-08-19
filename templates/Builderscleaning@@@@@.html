@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html> <!--<![endif]-->
+<head>
+<title>::~growcleaners~::</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap-theme.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static '/owl.theme.css' %}" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{% static 'css/easy-responsive-tabs.css' %}" />
+<link href="{% static 'css/animations.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="#">02 8006 9892</a> </div>
+            <div class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="#">jayclean.wa@gmail.com</a> </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="row">
+            <div class="social-media">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header_button" id="myHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a> </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="menu">
+            <nav>
+              <ul>
+               <li><a href="{% url 'home' %}">Home </a></li>
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                <li><a href="{% url 'prices' %}">Prices</a></li>
+                <li><a href="{% url 'services' %}"> Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+              </ul>
+            </nav>
+       
+          </div>
+        </div>
+        {% if user.id is None %}
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+     <div class="login">
+         <ul>
+              <li><a href="{% url 'login' %}">Login </a></li>
+              <li><a href="{% url 'book' %}">Book a services</a></li>
+            
+            </ul>
+            </div>
+      </div>
+      {% else %}   
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="Profile">
+          <ul>
+              <li><a href="{% url 'logout' %}">Logout </a></li>
+              <li><a href="{% url 'book' %}">Book a services</a></li>
+            
+            </ul>
+        </div>
+      {% endif %}
+      </div>
+  </div></div>
+  </div>
+  </div>
+</header>
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="{% static 'images/login_silder.jpg' %}" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Book a services </h1>
+           
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="book_page">
+   <div class="container"> 
+    <div class="row">
+       
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">	
+				 <div class="row">
+        
+                   <div class="progress">
+                   
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="alert alert-success hide"></div>
+  <form id="regiration_form" novalidate>
+  
+  
+    <fieldset id="con_field">
+ 
+      <div class="form-group">
+      <h2>Where should we serve you?</h2>
+  
+    <div class="map">
+      <p id="error" style="color:red;"></p>
+    <input type="text" id="zipc"  name="q" required oninput="zipCode()" placeholder="Enter your postcode..." autocomplete="off">
+     
+  
+  
+  
+            <!-- <button id="con" >continue</button> -->
+           <a id="con" onclick="clicknext()"  >Continue</a>
+           <!-- <input type="button" name="next" id="Button" disabled class="next btn btn-info" value="Next" /> -->
+           <!-- <a  class="next" >Continue</a> -->
+           <!-- <input type="button" name="next" id="Button"  class="next btn btn-info" value="Next" /> -->
+  
+    </div>
+      <div class="search_b">
+        
+   <p> Find out if our service is available in your area.</p>
+  
+    </div>
+      
+      </div>
+     
+      <!-- <input type="button" name="previous" class="previous btn btn-default" value="Previous" /> -->
+      <input type="button" name="next" id="Button" style="visibility:hidden;" class="next btn btn-info" value="Next" />
+    </fieldset>
+
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>What is the type of your enquiry?	</h2>
+ 
+  <div class="radio" id="demo" onchange="demo();">
+
+
+   <div class="flex">
+  <input type="radio" name="radio" onclick="dis();" id="radio1" value="Commercial Cleaning" />
+  <label for="radio1">Commercial Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" onclick="dis();" id="radio2" value="Domestic Cleaning" />
+  <label for="radio2">Domestic Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" onclick="dis();" id="radio3" value="Residential Cleaning" />
+  <label for="radio3">Residential Cleaning</label>
+</div>
+        
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+ <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode"></span></div>
+   <div class="services">
+   <span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="hello"></p>
+   
+   </div>
+   
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" id="button2" disabled class="next btn btn-info" value="Next" onclick="democall();" />
+  
+  </fieldset>
+  
+   <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group" >
+  
+   <h2>Please tell us about your place:	</h2>
+ 
+  <div class="radio" >
+<div class="housediv" >
+	<div class="house-w" >
+    <div class="flex">
+  <input type="radio" name="radio" onchange="yes();" id="rad1" value ="Flat/Unit" />
+  <label for="radio1">Flat/Unit	</label>
+</div>
+</div>
+
+
+  
+  <blockquote>
+  <div class="room-w">
+<h5> Bedroom(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="bedn" onchange="bedno()" disabled value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<script>
+  function bedno(){
+    n=document.getElementById("bedn").value;
+    console.log(n)
+    document.getElementById("bednum").innerHTML="Bedroom(s) "+n;
+  }
+
+</script>
+
+<div class="room-w">
+<h5>  Bathroom(s)</h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="bathn" onchange="bathno()" disabled value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<script>
+  function bathno(){
+    n=document.getElementById("bathn").value;
+    console.log(n)
+    document.getElementById("bathnum").innerHTML="Bathroom(s) "+n;
+
+  }
+</script>
+</blockquote>     
+    
+   
+</div>
+
+ <div class="housediv">
+	
+    <div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" onchange="yes();" id="rad2" value ="House" />
+  <label for="radio2">House	</label>
+</div>
+</div>
+  <blockquote>
+  
+  <div class="room-w">
+<h5> Bedroom(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="h_bedn" onchange="h_bedno()" disabled value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<script>
+  function h_bedno(){
+    n=document.getElementById("h_bedn").value;
+    console.log(n)
+    document.getElementById("bednum").innerHTML="Bedroom(s) "+n;
+  }
+
+</script>
+<div class="room-w">
+<h5> Level(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="h_level" onchange="h_levelno()" disabled value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<script>
+  function h_levelno(){
+    n=document.getElementById("h_level").value;
+    console.log(n)
+    document.getElementById("level").innerHTML="Level(s) "+n;
+  }
+  </script>
+<div class="room-w">
+<h5>  Bathroom(s)</h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="h_bath" onchange="h_bathno()" disabled value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<script>
+  function h_bathno(){
+    n=document.getElementById("h_bath").value;
+    console.log(n)
+    document.getElementById("bathnum").innerHTML="Bathroom(s) "+n;
+  }
+
+</script>
+
+</blockquote>     
+   
+ 
+    
+   
+</div>  
+
+
+
+   
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode1" ></span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="hello1"></p>
+   <p id="hello2"> </p>
+   <p id="bednum"></p>
+   <p id="bathnum"> </p>
+   <p id ="level"></p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" id="button3"  onclick="demo2call()" value="Next" />
+
+  </fieldset>
+  
+  <fieldset>
+    <script>
+      function demo2call(){
+   
+        document.getElementById("postcode2").innerHTML=document.getElementById("postcode1").innerHTML;
+        document.getElementById("service1").innerHTML=document.getElementById("hello1").textContent;
+        document.getElementById("place").innerHTML=document.getElementById("hello2").innerHTML;
+        document.getElementById("bed1").innerHTML=document.getElementById("bednum").innerHTML;
+        document.getElementById("bath1").innerHTML=document.getElementById("bathnum").innerHTML;
+        document.getElementById("level1").innerHTML=document.getElementById("level").innerHTML;
+
+      }
+    </script>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Is the property furnished or empty?	</h2>
+ 
+  <div class="radio">
+
+
+   <div class="flex">
+  <input type="radio" name="radios" id="radio1" onchange="property()" value="Furnished(full of personal belongings)"/>
+  <label for="radio1">Furnished(full of personal belongings)		</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radios" id="radio2" onchange="property()" value="Empty/Almost empty" />
+  <label for="radio2">Empty/Almost empty	</label>
+</div>
+<script>
+  function property(){
+    // var option=document.querySelector("input[name=radios]:checked").value;
+    document.getElementById("property").innerHTML=document.querySelector("input[name=radios]:checked").value;
+    
+  }
+</script>
+        
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode2" ></span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="service1"></p>
+   <p id="place"></p>
+   <p id="bed1"></p>
+   <p id="bath1"></p>
+   <p id="level1"></p>
+   <p id="property"></p>
+
+
+     </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" onclick="demo3call()" />
+
+  </fieldset>
+
+  <fieldset>
+
+    <script>
+      function demo3call(){
+   
+        document.getElementById("postcode3").innerHTML=document.getElementById("postcode2").innerHTML;
+        document.getElementById("service2").innerHTML=document.getElementById("service1").textContent;
+        document.getElementById("place2").innerHTML=document.getElementById("place").innerHTML;
+        document.getElementById("bed2").innerHTML=document.getElementById("bed1").innerHTML;
+        document.getElementById("bath2").innerHTML=document.getElementById("bath1").innerHTML;
+        document.getElementById("level2").innerHTML=document.getElementById("level1").innerHTML;
+        document.getElementById("property2").innerHTML=document.getElementById("property").innerHTML;
+
+      }
+    </script>
+
+
+    <div class="row">
+ 
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+      <div class="form-group">
+   
+    <h2>How would you like your carpets to be cleaned?	</h2>
+  
+   <div class="radio">
+ 
+ 
+    <div class="flex">
+   <input type="radio" name="radio" id="radio1" onchange="Hoovered()" value="Hoovered only" />
+   <label for="radio1">Hoovered only	</label>
+ </div>
+ <div class="flex">
+   <input type="radio" name="radio" id="radio2" onchange="Hoovered()" value="Professionally cleaned" />
+   <label for="radio2">Professionally cleaned	</label>
+ </div>
+ <div class="flex">
+   <input type="radio" name="radio" id="radio3" onchange="Hoovered()" value="I don`t have carpets" />
+   <label for="radio2">I don`t have carpets	</label>
+ </div>
+         
+   </div>
+    
+   </div>
+   
+   </div>
+   <script>
+    function Hoovered(){
+      // var option=document.querySelector("input[name=radios]:checked").value;
+      document.getElementById("Hoovered2").innerHTML=document.querySelector("input[name=radio]:checked").value;
+      
+    }
+  </script>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="book-right-top">
+   <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+    <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode3"></span></div>
+    
+    <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+    <h4>The service includes:</h4>
+    <p id="service2"></p>
+    <p id="place2"></p>
+    <p id="bed2"></p>
+    <p id="bath2"></p>
+    <p id="level2"></p>
+    <p id="property2"></p>
+    <p id="Hoovered2"></p>
+
+    </div>
+    </div>
+    
+    <div class="expandables">
+   
+     <h4>The service includes:</h4>
+   <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+ </blockquote>     
+    
+     <h4>NOTE:</h4>
+   <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+ </blockquote>     
+     
+    
+ </div>
+    
+    </div>
+    </div>
+ 
+    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+    <input type="button" name="next" class="next btn btn-info" value="Next" onclick="demo4call()" />
+ 
+   </fieldset>
+   
+  
+  
+  <fieldset>
+    <script>
+      function demo4call(){
+   
+        document.getElementById("postcode4").innerHTML=document.getElementById("postcode3").innerHTML;
+        document.getElementById("service3").innerHTML=document.getElementById("service2").textContent;
+        document.getElementById("place3").innerHTML=document.getElementById("place2").innerHTML;
+        document.getElementById("bed3").innerHTML=document.getElementById("bed2").innerHTML;
+        document.getElementById("bath3").innerHTML=document.getElementById("bath2").innerHTML;
+        document.getElementById("level3").innerHTML=document.getElementById("level2").innerHTML;
+        document.getElementById("property3").innerHTML=document.getElementById("property2").innerHTML;
+        document.getElementById("Hoovered3").innerHTML=document.getElementById("Hoovered2").innerHTML;
+
+      }
+    </script>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Most of our customers who book afterbuilders cleaning also include:	</h2>
+ 
+  <div class="checkbox-w">
+
+
+  <div class="checkbox">
+                    <input type="checkbox" class="check1" id="info" value="Mattress(es)" />
+                    <label for="info"> Mattress(es)  </label>
+                </div>
+ <div class="checkbox">
+                    <input type="checkbox" class="check1" id="info"  value="Single Oven $124"/>
+                    <label for="info"> Single Oven $124 </label>
+                </div>
+ <div class="checkbox">
+                    <input type="checkbox" class="check1" id="info" value="Double Oven $134" />
+                    <label for="info"> Double Oven $134 </label>
+                </div>
+                
+ 
+ 
+   <div class="housediv">
+	
+    <div class="house-w">
+    <div class="flex">
+   <div class="house-w">
+                    <input type="checkbox" class="check1" id="info"  value="Matress cleaning"/>
+                    <label for="info"> Matress cleaning	 </label>
+                </div>
+</div>
+</div>
+  <blockquote>
+  
+  <div class="room-w">
+<h5>  Mattress(es)  </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="h_mat" onchange="h_matno()" disabled  value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+<script>
+  function h_matno(){
+    n=document.getElementById("h_mat").value;
+    console.log(n)
+    document.getElementById("matress").innerHTML="Matress(s) "+n;
+
+  }
+
+
+
+</script>
+<script>
+  // function check(){
+  //   var c=document.querySelector('.checkbox').checked;
+  //   consol.log(c)
+    
+  // }
+  // $("input[name='check1']:checked").each(function (){
+  //   var s=this.value;
+  //   console.log(s);
+  // })
+  //  var list=[];
+  //  var checkboxes= document.querySelectorAll('.checkbox');
+  //  for(var checkbox of checkboxes){
+  //    checkbox.addEventListener('checked',function(){
+  //      if(this.checked==true){
+  //        list.push(this.value);
+  //        console.log(this.value)
+  //      }
+  //      else{
+  //        list=list.filter(e => e!== this.value);
+  //        console.log(list)
+  //      }
+  //    })
+  //  }
+  
+
+
+</script>
+
+</blockquote>     
+   
+ 
+    
+   
+</div>
+     
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode4"></span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="service3"></p>
+   <p id="place3"></p>
+   <p id="bed3"></p>
+   <p id="bath3"></p>
+   <p id="level3"></p>
+   <p id="property3"></p>
+   <p id="Hoovered3"></p>
+   <p id="selectedtext"></p>
+   <p id="matress"></p>
+   <!-- <textarea
+      type="text"
+      name=""
+      id="selectedtext"
+      cols="30"
+      rows="10"
+    ></textarea
+    ><br /> -->
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" onclick="demo5call()" />
+
+  </fieldset>
+  
+  <fieldset>
+
+    <script>
+      function demo5call(){
+   
+        document.getElementById("postcode5").innerHTML=document.getElementById("postcode4").innerHTML;
+        document.getElementById("service5").innerHTML=document.getElementById("service3").textContent;
+        document.getElementById("place4").innerHTML=document.getElementById("place3").innerHTML;
+        document.getElementById("bed4").innerHTML=document.getElementById("bed3").innerHTML;
+        document.getElementById("bath4").innerHTML=document.getElementById("bath3").innerHTML;
+        document.getElementById("level4").innerHTML=document.getElementById("level3").innerHTML;
+        document.getElementById("property4").innerHTML=document.getElementById("property3").innerHTML;
+        document.getElementById("Hoovered4").innerHTML=document.getElementById("Hoovered3").innerHTML;
+        document.getElementById("selectedtext2").innerHTML=document.getElementById("selectedtext").innerHTML;
+        document.getElementById("matress2").innerHTML=document.getElementById("matress").innerHTML;
+
+      }
+    </script>
+    
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>We recommend a total of:</h2>
+ 
+  <div class="room-w">
+<h5>  Man Hour(s)  </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" id="man" onchange="manhourno()" disabled   value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+   
+  </div>
+<script>
+   function manhourno(){
+    n=document.getElementById("man").value;
+    console.log(n)
+    document.getElementById("manhour").innerHTML="Man Hour(s) "+n;
+
+  }
+
+</script>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode5"></span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="service5"></p>
+   <p id="place4"> </p>
+   <p id="bed4"></p>
+   <p id="bath4"></p>
+   <p id="level4"></p>
+   <p id="property4"></p>
+   <p id="Hoovered4"></p>
+   <p id="selectedtext2"></p>
+   <p id="matress2"></p>
+   <p id="manhour">MAN HOUR(S) 1</p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" onclick="demo6call()" />
+
+  </fieldset>
+  <fieldset>
+
+    <script>
+      function demo6call(){
+   
+        document.getElementById("postcode6").innerHTML=document.getElementById("postcode5").innerHTML;
+        document.getElementById("service6").innerHTML=document.getElementById("service5").textContent;
+        document.getElementById("place5").innerHTML=document.getElementById("place4").innerHTML;
+        document.getElementById("bed5").innerHTML=document.getElementById("bed4").innerHTML;
+        document.getElementById("bath5").innerHTML=document.getElementById("bath4").innerHTML;
+        document.getElementById("level5").innerHTML=document.getElementById("level4").innerHTML;
+        document.getElementById("property5").innerHTML=document.getElementById("property4").innerHTML;
+        document.getElementById("Hoovered5").innerHTML=document.getElementById("Hoovered4").innerHTML;
+        document.getElementById("selectedtext3").innerHTML=document.getElementById("selectedtext2").innerHTML;
+        document.getElementById("matress3").innerHTML=document.getElementById("matress2").innerHTML;
+        document.getElementById("manhour2").innerHTML=document.getElementById("manhour").innerHTML;
+
+      }
+    </script>
+
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Is there anything else you'd like us to know?</h2>
+ 
+  <div class="radio">
+
+ <textarea name="" cols="" rows=""></textarea>
+  </div>
+   
+  </div>
+  
+  </div>
+  
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span id="postcode6"></span></div>
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p id="service6"></p>
+   <p id="place5"> </p>
+   <p id="bed5"></p>
+   <p id="bath5"></p>
+   <p id="level5"></p>
+   <p id="property5"></p>
+   <p id="Hoovered5"></p>
+   <p id="selectedtext3"></p>
+   <p id="matress3"></p>
+   <p id="manhour2"></p>
+   
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   
+   
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  
+
+  </form>     
+                       
+                       
+				</div>
+                
+</div>
+      
+        </div>
+        </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+<footer>
+  <div class="footer_top">
+    <div class="container">
+      <div class="row">
+        <div class="email"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span><a href="mailto:info@opinionuksurvey.co.uk"> info@opinionuksurvey.co.uk</a> </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Prices</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Domestic & Residential</a></li>
+          <li><a href="#">Maintenance services</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer_botton">
+    <div class="container">
+      <div class="row">
+        <div class="copyright">
+          <p>&copy;2021 All Rights Reserved. Designed By : <a
+                    href="https://www.businessdesignz.com">businessdesignz.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <style type="text/css">
+  #regiration_form fieldset:not(:first-of-type) {
+    display: none;
+  }
+  </style>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script src="{% static 'js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+<script>
+  var con_field=document.getElementById("con_field")
+  
+ con_field.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      clicknext();
+        // alert('Enter is pressed!');
+    }
+});
+function clicknext() {
+  
+    var finalzip = document.getElementById("zipc").value;
+    
+  
+    // document.getElementById("Button").click();
+    // console.log(finalzip)
+    // document.getElementById("postcode").innerHTML="POSTCODE:" +" "+finalzip;
+    var zip = document.getElementById("zipc").value;
+    var button = document.getElementById("Button");
+    var con=document.getElementById("con");
+    button.disabled = true;
+    con.disabled=true;
+      //  console.log(zip)
+  
+       
+    if (5999< zip && zip < 6998) {
+        //  console.log("inside if")
+        //  <input type="button" name="next" class="next btn btn-info" value="Next" />
+      button.disabled = false;
+      con.disabled=false;
+      document.getElementById("Button").click();
+      document.getElementById("postcode").innerHTML="POSTCODE:" +" "+finalzip;
+        
+        // console.log(zip)
+        // document.getElementById("Button").click();
+  
+       }
+       else{
+        document.getElementById("error").innerHTML="Please input a valid zipcode";
+         
+        //  console.log("worng")
+       }
+  
+     }
+
+</script>
+
+<script>
+  //  $(':checkbox').each(function () { this.checked = !this.checked; });
+</script>
+<script>
+//   $("input[type='radio']").click(function()
+// {
+//   var previousValue = $(this).attr('previousValue');
+//   var name = $(this).attr('name');
+
+//   if (previousValue == 'checked')
+//   {
+//     $(this).removeAttr('checked');
+//     $(this).attr('previousValue', false);
+//   } 
+//   else
+//   {
+//     $("input[name='+name+']:radio").attr('previousValue', false);
+//     $(this).attr('previousValue', 'checked');
+//   }
+// });
+$(document).ready(function () {
+        $(".check1").click(function () {
+          var text = "";
+          $(".check1:checked").each(function () {
+            text += $(this).val() + '<br>';
+            // console.log(text);
+          });
+          text = text.substring(0, text.length - 1);
+          $("#selectedtext").html(text);
+        });
+      });
+    // var a=document.getElementsByTagName("selectedtext").innerHTML;
+    // if (a.includes("Mattress(es)")){
+    //   console.log("matress")
+    //   break;
+    // }else{
+    //   document.getElementById("matress").innerHTML="";
+    // }
+  function yes()
+  {
+  var d=document.getElementById("yes");
+  // console.log(d)
+  if (document.getElementById('rad1').checked) {
+    document.getElementById("bednum").innerHTML= "";
+    document.getElementById("level").innerHTML= "";
+    document.getElementById("bathnum").innerHTML= "";
+
+    rate_value2 = document.getElementById('rad1').value;
+    console.log("option1")
+    document.getElementById("hello2").innerHTML=rate_value2;
+    document.getElementById("bednum").innerHTML= "Bedroom(s) "+1;
+    document.getElementById("bathnum").innerHTML= "Bathroom(s) "+1;
+
+  }
+  if (document.getElementById('rad2').checked) {
+    rate_value2 = document.getElementById('rad2').value;
+    console.log("option2")
+    document.getElementById("hello2").innerHTML=rate_value2;
+    document.getElementById("bednum").innerHTML= "Bedroom(s) "+1;
+    document.getElementById("level").innerHTML= "Levels(s) "+1;
+
+    document.getElementById("bathnum").innerHTML= "Bathroom(s) "+1;
+  }
+
+  }
+  function ena(){
+    var c = document.getElementById('button3');
+    c.disabled=false;
+
+  }
+</script>
+<script>
+  function clicknext() {
+    
+      var finalzip = document.getElementById("zipc").value;
+      
+    
+      // document.getElementById("Button").click();
+      // console.log(finalzip)
+      // document.getElementById("postcode").innerHTML="POSTCODE:" +" "+finalzip;
+      var zip = document.getElementById("zipc").value;
+      var button = document.getElementById("Button");
+      var con=document.getElementById("con");
+      button.disabled = true;
+      con.disabled=true;
+        //  console.log(zip)
+    
+         
+      if (5999< zip && zip < 6998) {
+          //  console.log("inside if")
+          //  <input type="button" name="next" class="next btn btn-info" value="Next" />
+        button.disabled = false;
+        con.disabled=false;
+        document.getElementById("Button").click();
+        document.getElementById("postcode").innerHTML="POSTCODE:" +" "+finalzip;
+          
+          // console.log(zip)
+          // document.getElementById("Button").click();
+    
+         }
+         else{
+          document.getElementById("error").innerHTML="Please input a valid zipcode";
+           
+          //  console.log("worng")
+         }
+    
+       }
+    // </script>
+
+<script>
+  function zipCode(){
+    var zip = document.getElementById("zipc").value;
+    var button = document.getElementById("Button");
+    var con=document.getElementById("con");
+    button.disabled = true;
+    con.disabled=true;
+   //  console.log(zip)
+
+    
+    if (5999< zip && zip < 6998) {
+     //  console.log("inside if")
+     //  <input type="button" name="next" class="next btn btn-info" value="Next" />
+     button.disabled = false;
+     con.disabled=false;
+     
+     // console.log(zip)
+     // document.getElementById("Button").click();
+
+    }
+    else{
+      // var err=document.getElementById("error");
+      
+     //  console.log("worng")
+    }
+
+  }
+  
+</script>
+<script>
+  function demo()
+  {
+   
+   
+   var d=document.getElementById("demo");
+   // var c = document.getElementById('button2');
+   // console.log(c)
+   // button.disabled = true;
+   if (document.getElementById('radio1').checked) {
+     rate_value = document.getElementById('radio1').value;
+     // console.log(rate_value)
+    //  document.getElementById('button2').disabled = false;
+     document.getElementById("hello").innerHTML=rate_value;
+     
+
+   }
+   if (document.getElementById('radio2').checked) {
+    // document.getElementById('button2').disabled = false;
+     rate_value = document.getElementById('radio2').value;
+     // console.log(rate_value)
+     document.getElementById("hello").innerHTML=rate_value;
+     
+   }
+   if (document.getElementById('radio3').checked) {
+    // document.getElementById('button2').disabled = false;
+     rate_value = document.getElementById('radio3').value;
+     // console.log(rate_value)
+     document.getElementById("hello").innerHTML=rate_value;
+     
+   }
+   }
+
+
+   function dis(){
+     var c = document.getElementById('button2');
+     c.disabled=false;
+     
+
+   }
+</script>
+
+<script>
+  function democall()
+  {
+   var d=document.getElementById("hello");
+   console.log(d)
+   document.getElementById("hello1").innerHTML=d.textContent;
+   var finalzip = document.getElementById("zipc").value;
+   console.log(finalzip)
+
+   document.getElementById("postcode1").innerHTML="POSTCODE:" +" "+finalzip;
+
+   }
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+		 $('nav').meanmenu();
+		  $("#slider1").responsiveSlides({
+      
+        speed: 800
+      });
+	   var owl = $("#owl-demo");
+
+      owl.owlCarousel();
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });
+
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+ 
+
+
+  </script>
+<script>
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+
+                    {
+
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+</script>
+ <script>
+  $(document).ready(function(){
+  var current = 1,current_step,next_step,steps;
+  steps = $("fieldset").length;
+  $(".next").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().next();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(++current);
+  });
+  $(".previous").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().prev();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(--current);
+  });
+  setProgressBar(current);
+  // Change progress bar action
+  function setProgressBar(curStep){
+    var percent = parseFloat(100 / steps) * curStep;
+    percent = percent.toFixed();
+    $(".progress-bar")
+      .css("width",percent+"%")
+      .html(percent+"%");   
+  }
+
+  
+});
+
+$( "#regiration_form" ).submit(function(event) {
+    jQuery('.alert-success').removeClass('hide').html( "Handler for .submit() called and see console logs for your posted variable" );
+    console.log($(this).serialize());
+    event.preventDefault();
+  });
+  $(".expandables h4").click(function() {
+ if ($(this).hasClass("expanded")) {
+      $(this).removeClass("expanded");
+      $(this).next().removeClass("expanded");
+    } else {
+      $(this).addClass("expanded");
+      $(this).next().addClass("expanded");
+    }
+});
+  $(".housediv .house-w").click(function() {
+ if ($(this).hasClass("expanded")) {
+      $(this).removeClass("expanded");
+      $(this).next().removeClass("expanded");
+    } else {
+      $(this).addClass("expanded");
+      $(this).next().addClass("expanded");
+    }
+	
+});
+
+  </script>
+   <script src="{% static 'js/jquery.plugin.min.js' %}"></script>
+<script src="{% static 'js/jquery.datepick.js' %}"></script>
+<script>
+$(function() {
+	$('#rangeNoWeekendPicker').datepick({rangeSelect: true, 
+    onDate: $.datepick.noWeekends, showTrigger: '#calImg'});
+});
+
+function showDate(date) {
+	alert('The date chosen is ' + date);
+}
+</script>
+<script>
+	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
+

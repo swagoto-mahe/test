@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="slider-inner">
+
+    <ul class="rslides">
+   
+     <li><img src="{% static 'images/slider_inner7.jpg' %}" alt="">
+         
+         <div class="text_w">
+          <div class="container">
+            <div class="text_bg">
+              <h1>Contact Us</h1>
+              <a href="https://www.vitalforce.co.uk/order-our-staff">Book  a services </a> </div>
+          </div>
+        </div>
+      </li>
+    
+       
+      
+  </ul>
+</section>
+
+<section class="inner_section">
+ <div class="container">
+    <section class="contact">
+<h2 style="text-align: center;">Get In Touch With Us</h2>
+<div class="add" style="text-align: center;">Address :&nbsp; 67 Wylye Road, Warminster, United Kingdom, BA12 9PU</p>
+<p style="text-align: center;">
+<p style="text-align: center;">Email : <a href="mailto:info@tintbros.com.au "> info@tintbros.com.au </a></p>
+<p style="text-align: center;">Phone : &nbsp;1300 222 444</p>
+</div>
+<h3>Send us a message</h3>
+                      
+          
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<div class="form-container">
+<form role="form" method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p>
+  <label> Your name </label>
+  <input  type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+  </p>
+  
+  <p>
+  <label>Your email</label>
+  <input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+  </p>
+  
+  <p>
+  <label>message </label>
+  <textarea name="msg" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+  </p>
+  <p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"></p>
+ </form>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<div class="iframe_product">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.907904295128!2d-0.12573508422974106!3d51.51490557963637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccaaa0b0b7%3A0xbe144a0754857ae1!2s71-75%20Shelton%20St%2C%20West%20End%2C%20London%20WC2H%209JQ%2C%20UK!5e0!3m2!1sen!2sin!4v1600510988598!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+</div>
+</section>
+  
+  
+  </div>
+  
+  
+  <section class="testimonial_section">
+  <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        
+        
+        
+        
+       </div>  
+      </div>
+      
+
+  </section>
+
+</section>
+{% endblock %}

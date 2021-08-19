@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="slider-inner">
+
+    <ul class="rslides">
+   
+     <li><img src="{% static 'images/slider_inner6.jpg' %}" alt="">
+         
+         <div class="text_w">
+          <div class="container">
+            <div class="text_bg">
+              <h1>About Us</h1>
+              <a href="https://www.vitalforce.co.uk/order-our-staff">Book  a services </a> </div>
+          </div>
+        </div>
+      </li>
+    
+       
+      
+  </ul>
+</section>
+
+<section class="inner_section">
+  {% for post in post_list %}
+
+    <section class="about_section">
+     <div class="container">
+     <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about_text">
+    <h2 align="center"> {{ post.header }}</h2>
+    <p align="center">{{ post.heade2 }}</p>
+    </div>
+     </div>
+       </div>
+    </section>
+    <section class="founding_section">
+      
+      <div class="container">
+      <div class="row">
+        
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+      
+      <h2>{{ post.title }}</h2>
+      
+      <small>{{ post.middel }}</small>
+        <p>{{ post.content }}</p>
+        
+        </div>
+        
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+          <img src="{{ post.image.url }}" alt="">
+        </div>
+      
+      </div>
+      
+      </div>
+    </section>
+       <section class="mission_section">
+     <div class="container">
+     <div class="row">
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="{{ post.side_image.url }}" alt="">
+      </div>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+     <h3>{{post.footer_header }}</h3>
+       <p>{{ post.foter_description }}</p>
+
+
+
+     <div class="row mission">
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      
+       <img src="{{ post.footer_image_1.url }}" alt="">
+     
+     <h4>{{ post.footer_image_1_header }}</h4>
+<p>{{ post.footer_image_1_description }}</p>
+    
+     </div>
+         
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      
+       <img src="{{ post.footer_image_2.url }}" alt="">
+     
+     <h4>{{post.footer_image_2_header }}</h4>
+      <p>{{ post.footer_image_2_description }}</p>
+    
+     </div>
+    </div>
+      </div>
+      
+       
+      
+      
+      
+      
+     </div>
+     
+     </div>
+    </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  
+  <section class="testimonial_section">
+  <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        
+        
+        
+        
+       </div>  
+      </div>
+      
+
+  </section>
+  </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

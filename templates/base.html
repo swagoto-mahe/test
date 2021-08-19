@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+{% load static %}
+<html> 
+<head>
+<title>::~growcleaners~::</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap-theme.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+<link href="{% static 'css/animations.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/easy-responsive-tabs.css' %}" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+  <div class="header_top">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="row">
+          <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="#">02 8006 9892</a> </div>
+          <div class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="#">jayclean.wa@gmail.com</a> </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="row"> 
+        <div class="social-media">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+<div class="header_button" id="myHeader">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      
+       
+          <div class="menu">
+          <nav>
+            <ul>
+             <li><a href="{% url 'home' %}">Home </a></li>
+              <li><a href="{% url 'about' %}">ABOUT US</a></li>
+              <li><a href="{% url 'prices' %}">Prices</a></li>
+              <li><a href="{% url 'services' %}"> Services</a></li>
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+          </nav>
+     
+        </div>
+      </div>
+      {% if user.id is None %}
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+     <div class="login">
+         <ul>
+              <li><a href="{% url 'login' %}">Login </a></li>
+              <li><a href="{% url 'book' %}">Book a services</a></li>
+            
+            </ul>
+            </div>
+      </div>
+      {% else %}   
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="Profile">
+          <ul>
+              <li>Welcome {{ user.first_name }}</li>
+              <li><a href="{% url 'logout' %}">Logout </a></li>
+              <li><a href="{% url 'book' %}">Book a services</a></li>
+            
+            </ul>
+        </div>
+      {% endif %}
+      </div>
+  </div></div>
+  </div>
+</header>
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+
+<footer>
+    <div class="footer_top">
+      <div class="container">
+        <div class="row">
+        <div class="email"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span><a href="mailto:info@opinionuksurvey.co.uk"> info@opinionuksurvey.co.uk</a> </div>
+         <ul>
+                          <li><a href="{% static 'index.html">Home</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Prices</a></li>
+                          <li><a href="#">Commercial</a></li>
+                          <li><a href="#">Domestic & Residential</a></li>
+                          <li><a href="#">Maintenance services</a></li>
+                          <li><a href="#">Contact us</a></li>
+                      </ul>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="footer_botton">
+      <div class="container">
+        <div class="row">
+          <div class="copyright">
+            <p>&copy;2021 All Rights Reserved. Designed By : <a
+                      href="https://www.businessdesignz.com">businessdesignz.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script src="{% static 'js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+		 $('nav').meanmenu();
+		  $("#slider1").responsiveSlides({
+      
+        speed: 800
+      });
+	   var owl = $("#owl-demo");
+
+      owl.owlCarousel();
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });
+
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+ 
+
+  
+  </script>
+  <script>
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+
+                    {
+
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+		 $('nav').meanmenu();
+		  $("#slider1").responsiveSlides({
+      
+        speed: 800
+      });
+	   var owl = $("#owl-demo");
+
+      owl.owlCarousel();
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });
+
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+ 
+
+
+  </script>
+<script>
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+
+                    {
+
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+</script>
+ <script>
+  $(document).ready(function(){
+  var current = 1,current_step,next_step,steps;
+  steps = $("fieldset").length;
+  $(".next").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().next();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(++current);
+  });
+  $(".previous").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().prev();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(--current);
+  });
+  setProgressBar(current);
+  // Change progress bar action
+  function setProgressBar(curStep){
+    var percent = parseFloat(100 / steps) * curStep;
+    percent = percent.toFixed();
+    $(".progress-bar")
+      .css("width",percent+"%")
+      .html(percent+"%");   
+  }
+  
+  
+});
+
+$( "#regiration_form" ).submit(function(event) {
+    jQuery('.alert-success').removeClass('hide').html( "Handler for .submit() called and see console logs for your posted variable" );
+    console.log($(this).serialize());
+    event.preventDefault();
+  });
+  $(".expandables h4").click(function() {
+ if ($(this).hasClass("expanded")) {
+      $(this).removeClass("expanded");
+      $(this).next().removeClass("expanded");
+    } else {
+      $(this).addClass("expanded");
+      $(this).next().addClass("expanded");
+    }
+});
+
+  </script>
+   <script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.datepick.js"></script>
+<script>
+$(function() {
+	$('#rangeNoWeekendPicker').datepick({rangeSelect: true, 
+    onDate: $.datepick.noWeekends, showTrigger: '#calImg'});
+});
+
+function showDate(date) {
+	alert('The date chosen is ' + date);
+}
+</script>
+  
+</body>
+</html>

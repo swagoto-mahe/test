@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="{% static 'images/slider_inner5.jpg' %}" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Services</h1>
+            <a href="{% static 'https://www.vitalforce.co.uk/order-our-staff' %}">Book  a services </a> </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="prices_section">
+    <div class="container">
+      <div class="row">
+        <section class="prices_tab">
+          <form action="{% url 'prices' %}" method="POST">
+            {% csrf_token %}
+
+            <div id="verticalTab">
+              
+              <ul class="resp-tabs-list">
+                {% for post in post_list %}
+                <li>{{ post.title }}</li>
+                {% endfor %}
+                <!-- <li>Commercial Cleaning</li>
+                <li>Construction Cleaning</li>
+                <li>Windows Cleaning</li>
+                <li>Carpet Cleaning</li>
+                <li>Furniture Cleaning</li> -->
+              </ul>
+              
+              
+              <div class="resp-tabs-container">
+                {% for post in post_list %}
+                  {% if post.title > 1 %}
+                <div>
+                  <div class="price_det">
+                  <h2>{{ post.title }}</h2>
+                
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – Friday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                  {% else %}
+              
+                <div class="price_det">
+                  <h2>{{ post.title }}</h2>
+                
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">{{post.Monday_Friday}}</th><th style="text-align: center;">{{post.Saturday }}</th><th style="text-align: center;">{{ post.sunday }}</th></tr></thead><tbody><tr><td><span class="bold">{{ post.Appointments }}</span></td><td style="text-align: center;"><span class="bold">{{ post.app_mon_friday_8am_6pm }}</span></td><td style="text-align: center;"><span class="bold">{{ post.app_mon_friday_6pm_10pm }}</span></td><td style="text-align: center;"><span class="bold">{{ post.app_Saturday_8am_6pm }}</span></td><td style="text-align: center;"><span class="bold">{{ post.app_Sunday_8am_6pm }}</span></td></tr><tr><td>{{post.First_hour }}</td><td style="text-align: center;">£{{ post.First_hour_mon_friday }}</td><td style="text-align: center;">£{{post.First_hour_moday_fri}}</td><td style="text-align: center;">£{{ post.First_hour_Saturday }}</td><td style="text-align: center;">£{{ post.First_hour_Sunday}}</td></tr><tr><td>{{ post.Subsequent }}</td><td style="text-align: center;">£{{post.Subsequent_mon_friday}}</td><td style="text-align: center;">£{{ post.Subsequent_monday_fri}}</td><td style="text-align: center;">£{{ post.Subsequent_Saturday }}</td><td style="text-align: center;">£{{ post.Subsequent_Sunday }}</td></tr><tr><td>{{ post.Daily_rate }}</td><td style="text-align: center;">£{{ post.Daily_rate_mon_frida}}</td><td style="text-align: center;">{{ post.Daily_rate_monday_fri }}</td><td style="text-align: center;">{{ post.Daily_rate_Saturday }}</td><td style="text-align: center;">{{ post.Daily_rate_sunday }}</td></tr></tbody></table>
+                    <h4>{{ post.footer1 }}</h4>
+                    <p>{{ post.footer2 }}</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+                </div>
+              
+                
+                <!-- <div>
+                  <div class="price_det">
+                  <h2>Commercial Cleaning</h2>
+              
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – Friday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="price_det">
+                  <h2>Construction Cleaning</h2>
+                
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – sunday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                    
+                    
+                  </div>
+                </div>
+                <div>
+                  <div class="price_det">
+                  <h2>Windows Cleaning</h2>
+                
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – Friday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="price_det">
+                  <h2>Carpet Cleaning</h2>
+                
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – Friday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="price_det">
+                  <h2>Furniture Cleaning</h2>
+                    <table><thead><tr><th></th><th style="text-align: center;" colspan="2">Monday – Friday</th><th style="text-align: center;">Saturday</th><th style="text-align: center;">Sunday</th></tr></thead><tbody><tr><td><span class="bold">Appointments</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">6 pm - 10pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td><td style="text-align: center;"><span class="bold">8 am - 6 pm</span></td></tr><tr><td>First hour</td><td style="text-align: center;">£98</td><td style="text-align: center;">£116</td><td style="text-align: center;">£116</td><td style="text-align: center;">£134</td></tr><tr><td>Subsequent half hours</td><td style="text-align: center;">£46</td><td style="text-align: center;">£55</td><td style="text-align: center;">£55</td><td style="text-align: center;">£64</td></tr><tr><td>Daily rate</td><td style="text-align: center;">£528</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td><td style="text-align: center;">---</td></tr></tbody></table>
+                    
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="#">Book a services</a>
+                  </div>
+                </div>
+                 -->
+              
+              
+              
+              
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+
+
+{% endblock %}

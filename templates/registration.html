@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="{% static 'images/login_silder.jpg' %}" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Login</h1>
+            <a href="https://www.vitalforce.co.uk/order-our-staff">Book  a services </a> </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="login_page">
+   <div class="container"> 
+    <div class="row">
+         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">	
+				 <div class="row">
+         
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 login_a">
+                       <h3>Already have an account yet? </h3> <a href="login.html">Login.</a>
+                       </div> 
+                       
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 login">	
+				                      
+                       					    <h2>Supplier Registration and Account</h2>
+                        <p>Registering for this site is easy. Just fill in the fields below, and we'll get a new account set up for you in no time.</p>
+						<!--<h3>Account Details</h3>-->
+						<form action="{% url 'register' %}" method="POST">
+              {% csrf_token %}
+
+              <!-- {{ from }} -->
+
+              <div class="form-group">
+                <label for="inputslidercaption">First name <span>*</span></label>
+                {{ form.first_name }}
+              </div>
+              <div class="form-group">
+                <label for="inputslidercaption">Last name <span>*</span></label>
+                {{ form.last_name }}
+              </div>
+              <div class="form-group">
+                <label for="inputslidercaption">Email <span>*</span></label>
+                {{form.email}}
+              </div>
+              <div class="form-group">
+                <label for="inputslidercaption">phone_number <span>*</span></label>
+                {{form.phone_number}}
+              </div>
+              <div class="form-group">
+                <label for="inputslidercaption">Password <span>*</span></label>
+                {{ form.password }}
+              </div>
+              <div class="form-group">
+                <label for="inputslidercaption">Repeat Password <span>*</span></label>
+                {{form.confirm_password}}
+              </div>
+						
+						<div class="form-group"><button type="submit" class="btn btn-info">Submit</button></div>
+						</form>
+                        
+						
+						<p>Go Back? <a href="#">Home</a></p>
+					   </div>
+				</div>
+                
+</div>
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>  
+        </div>
+        </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+{% endblock %}

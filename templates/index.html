@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="slider_section" >
+  <ul class="rslides" id="slider1">
+    <li> 
+    <img src="{% static 'images/slider_img3.jpg' %}" alt="">
+        <div class="text_w">
+              <div class="container">
+                <div class="text_bg">
+                  
+                <h2>An expert 
+                <span>cleaning service </span>
+                  you can trust </h2>
+                <a href="#">Book a services </a> </div>
+              </div>
+        </div>
+    </li>
+    <li> 
+    <img src="{% static 'images/slider_img4.jpg' %}" alt="">
+        <div class="text_w">
+              <div class="container">
+                <div class="text_bg">
+                  
+                <h2>Get Help in 
+                <span>Professional Cleaning</span>
+                from the Experts</h2>
+                <a href="#">Book a services</a> </div>
+              </div>
+        </div>
+    
+    </li>
+  </ul>
+</section>
+
+<section class="container_section">
+  
+  <div class="hometop_section">
+      <div class="container">
+        <div class="row">
+          {% for post in post_list %}
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <h2><span>{{ post.title }}</span>{{ post.wellcome_msg}}</h2>
+            <p>{{ post.wellcome_msg3 }}</p>
+            <a href="#" class="hvr-bounce-to-right">Request for a Quote</a> </div>
+          
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>  
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+  <section class="cs-services">
+    {% for post in post_list %}
+        <div class="container">
+            <h3>{{ post.best_team }}</h3>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="{{ post.commercial_image.url }}" />
+                    <h4><a href="services/commercial-cleaning">{{ post.commercial_cleaning }}</a></h4>
+                    <p>{{ post.commercial_description }}</p>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="{{ post.dom_residentiam_image.url }}" />
+                    <h4><a href="services/residential-cleaning">{{ post.dom_residentiam_clean }}</a></h4>
+                    <p>{{ post.dom_residentiam_description }}</p>
+                </div>
+                <div class="cs-services-mid">
+                   <h2><a href="services" style="color: aliceblue;"> {{post.cleaning_services}}</a></h2> 
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="{{ post.maintenance_image.url }}" />
+                    <h4><a href="services/maintenance-services">{{post.maintenance_services }}</a></h4>
+                    <p>{{ post.maintenance_description }}</p>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="{{ post.covid_image.url }}" />
+                    <h4><a href="services/covid-19-disinfection">{{post.covid_disinfection }}</a></h4>
+                    <p>{{ post.covid_description}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+  
+  
+  <div class="home_services">
+    <div class="container">
+      <div class="row">
+        {% for post in post_list %}
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h2>{{ post.what_makes_your_service}}</h2>
+        {% endfor %}
+        <ul> 
+          {% for post in post_list %}
+            
+           {% if post.services_1|length > 1 %}
+           <li>{{ post.services_1 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_2|length > 1 %}
+           <li>{{ post.services_2 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_3|length > 1 %}
+           <li>{{ post.services_3 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_4|length > 1 %}
+           <li>{{ post.services_4 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_5|length > 1 %}
+           <li>{{ post.services_5 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_6|length > 1 %}
+           <li>{{ post.services_6 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_7|length > 1 %}
+           <li>{{ post.services_7 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_8|length > 1 %}
+           <li>{{ post.services_8 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_9|length > 1 %}
+           <li>{{ post.services_9 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_10|length > 1 %}
+           <li>{{ post.services_10 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_11|length > 1 %}
+           <li>{{ post.services_11 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_12|length > 1 %}
+           <li>{{ post.services_12 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_13|length > 1 %}
+           <li>{{ post.services_13 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_14|length > 1 %}
+           <li>{{ post.services_14 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_15|length > 1 %}
+           <li>{{ post.services_15 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_16|length > 1 %}
+           <li>{{ post.services_16 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_17|length > 1 %}
+           <li>{{ post.services_17 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_18|length > 1 %}
+           <li>{{ post.services_18 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_19|length > 1 %}
+           <li>{{ post.services_19 }}</li>
+           {% else %}
+ 
+           {% endif %}
+           {% if post.services_20|length > 1 %}
+           <li>{{ post.services_20 }}</li>
+           {% else %}
+ 
+           {% endif %}
+ 
+ 
+ 
+ 
+           {% endfor %}
+        </ul>
+          </div>
+          {% for post in post_list %}
+         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+         <img src="{{ post.what_make_image.url }}" alt="">
+         </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  <section class="success_section">
+    <div class="success_bg">
+      <div class="success_text" id="counter">
+        <div class="container">
+          <h2>Our <span>Success Story</span></h2>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        
+            <h4><div class="counter-value" data-count="7000">0</div> +</h4>
+            <div class="projects">Working Hours</div>
+           
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          
+            <h4><div class="counter-value" data-count="2100">0</div> +</h4>
+            <div class="projects">Happy Clients</div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            
+            <h4><div class="counter-value" data-count="240">0</div> +</h4>
+            <div class="projects">Awards Taken</div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+           
+            <h4><div class="counter-value" data-count="10000">0</div> +</h4>
+            <div class="projects">Completed Projects</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonial_section">
+   <img src="{% static 'images/img1.png' %}" alt="">
+  <div class="testimonial_box">
+ 
+      <div id="owl-demo" class="owl-carousel">
+       
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+ nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+ nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        
+        
+        
+        
+       </div>  
+      </div>
+      
+
+  </section>
+  </div>
+  </div>
+  
+</section>
+
+{% endblock %}

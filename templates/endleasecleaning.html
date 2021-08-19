@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="images/login_silder.jpg" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Book a services </h1>
+           
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="book_page">
+   <div class="container"> 
+    <div class="row">
+       
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">	
+				 <div class="row">
+        
+                   <div class="progress">
+                   
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="alert alert-success hide"></div>
+  <form id="regiration_form" novalidate>
+  
+ 
+  <fieldset>
+ 
+    <div class="form-group">
+    <h2>Where should we serve you?</h2>
+ 
+  <div class="map">
+  <input type="text"   name="q" placeholder="Enter your postcode..." autocomplete="off">
+   
+         <a href="booknew3.html">Continue</a>
+  </div>
+    <div class="search_b">
+ <p> Find out if our service is available in your area.</p>
+  </div>
+    
+    </div>
+   
+    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+    <input type="button" name="next" class="next btn btn-info" value="Next" />
+  </fieldset>
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>What is the type of your enquiry?	</h2>
+ 
+  <div class="radio">
+
+
+   <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Commercial Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" id="radio2" />
+  <label for="radio2">Domestic Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" id="radio3" />
+  <label for="radio3">Residential Cleaning</label>
+</div>
+        
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+ <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services">
+   <span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   
+   </div>
+   
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Please tell us about your place:</h2>
+ 
+  <div class="radio">
+   
+
+<div class="housediv">
+	<div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Studio	</label>
+</div></div>     
+</div>
+  
+<div class="housediv">
+	<div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Flat/Unit	</label>
+</div></div>
+       
+  
+  <blockquote>
+  <div class="room-w">
+<h5> Bedroom(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+<div class="room-w">
+<h5>  Bathroom(s}</h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+</blockquote>     
+    
+   
+</div>
+
+ <div class="housediv">
+	
+    <div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio2" />
+  <label for="radio2">House	</label>
+</div>
+</div>
+  <blockquote>
+  
+  <div class="room-w">
+<h5> Bedroom(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<div class="room-w">
+<h5> Level(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+<div class="room-w">
+<h5>  Bathroom(s}</h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="1"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+</blockquote>     
+   
+ 
+    
+   
+</div>  
+
+
+
+   
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Do any of the following areas need cleaning too?</h2>
+ 
+  <div class="checkbox-w">
+
+
+  <div class="checkbox">
+                    <input type="checkbox"  id="info" />
+                    <label for="info"> Study room </label>
+                </div>
+ <div class="checkbox">
+                    <input type="checkbox"  id="info" />
+                    <label for="info">  Laundry </label>
+                </div>
+ <div class="checkbox">
+                    <input type="checkbox"  id="info" />
+                    <label for="info">  Separate toilet </label>
+                </div>
+                
+ <div class="checkbox">
+                    <input type="checkbox"  id="info" />
+                    <label for="info">  Balcony ($35)  </label><br>
+                     <label for="info"><p>Balcony balustrade/window cleaning is included</p></label>
+                </div>
+ 
+   
+     
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Please tell us about your place:</h2>
+ 
+  <div class="radio">
+   
+
+<div class="housediv">
+	<div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Vacuumed only	</label><br>
+  <label for="radio1"><p>Part of the service	</p></label>
+</div></div>     
+</div>
+  
+<div class="housediv">
+	<div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Steam Cleaned</label><br>
+   <label for="radio1"><p>Save up to 35% off the regular price for Steam Carpet Cleaning.</p></label>
+</div></div>
+       
+  
+  <blockquote>
+  <div class="room-w">
+<h5> Bedroom(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="0"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+<div class="room-w">
+<h5>  Living room(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="0"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+<div class="room-w">
+<h5>  Hallway(s)  </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="0"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+<div class="room-w">
+<h5> Staircase(s) </h5>
+    <div class="number">
+	<span class="minus">-</span>
+	<input type="text" value="0"/>
+	<span class="plus">+</span>
+</div> 
+</div>
+
+
+
+
+</blockquote>     
+    
+   
+</div>
+
+   
+
+
+
+   
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>On which floor is the property located and is there a lift?</h2>
+ 
+  <div class="radio">
+<div class="housediv">
+	<div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">There is a lift</label>
+</div></div>
+       
+  
+       
+    
+   
+</div>
+
+ <div class="housediv">
+	
+    <div class="house-w">
+    <div class="flex">
+  <input type="radio" name="radio" id="radio2" />
+  <label for="radio2">No lift	</label>
+</div>
+</div>
+  <blockquote>
+
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Up to 1st floor</label>
+</div> 
+
+    <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">2nd floor</label>
+</div> 
+
+
+<div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">3rd floor or above</label>
+</div>
+     
+
+</blockquote>     
+   
+ 
+    
+   
+</div>  
+
+
+
+   
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+
+  </fieldset>
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Is there anything else you'd like us to know?</h2>
+ 
+  <div class="radio">
+
+ <textarea name="" cols="" rows=""></textarea>
+  </div>
+   
+  </div>
+  
+  </div>
+  
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   
+   
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+ 
+  <div class="calendar_w">
+  <input type="text" id="rangeNoWeekendPicker">
+  <div class="form-heading">
+  <span> Saturday, jul 10 </span><span>Standard price</span><span>Fantastic Club price</span>
+  </div>
+  </div>
+  
+  
+    <div class="form-headingsub">
+    <ul>
+    <li> <span>  07:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  08:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  09:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  10:00  </span><span><a class="act" href="#"> $255</a> </span><span><a class="act" href="#"> $215 <b>+ EARN $360</b> </a></span></li>
+    <li> <span>  11:00  </span><span><a class="act" href="#"> n/a </a></span><span><a class="act" href="#"> $215 <b>+ EARN $360</b></a></span></li>
+    <li> <span>  13:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  11:00  </span><span><a class="act" href="#"> n/a </a></span><span><a class="act" href="#"> $215 <b>+ EARN $360</b> </a></span></li>
+    <li> <span>  15:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  16:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  17:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  18:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    </ul>
+ 
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+  <div class="book-right-top">
+  <div class="book-banner"><img src="images/banner-card.png" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+    <div class="services"><span><i class="fa fa-calendar" aria-hidden="true"></i> </span>
+   <h4> Appointment time :</h4>
+   <p>13:00, Tuesday, Aug 03</p>
+   
+   </div>
+    <div class="services-price">Service price <span>$255</span></div>
+     <div class="total-price">Total <span>$255</span></div>
+   
+  
+   
+   
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   </div>
+ 
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  </form>     
+                       
+                       
+				</div>
+                
+</div>
+      
+        </div>
+        </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+
+  <style type="text/css">
+  #regiration_form fieldset:not(:first-of-type) {
+    display: none;
+  }
+  </style>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.meanmenu.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+		 $('nav').meanmenu();
+		  $("#slider1").responsiveSlides({
+      
+        speed: 800
+      });
+	   var owl = $("#owl-demo");
+
+      owl.owlCarousel();
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });
+
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+ 
+
+
+  </script>
+<script>
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+
+                    {
+
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+</script>
+ <script>
+  $(document).ready(function(){
+  var current = 1,current_step,next_step,steps;
+  steps = $("fieldset").length;
+  $(".next").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().next();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(++current);
+  });
+  $(".previous").click(function(){
+    current_step = $(this).parent();
+    next_step = $(this).parent().prev();
+    next_step.show();
+    current_step.hide();
+    setProgressBar(--current);
+  });
+  setProgressBar(current);
+  // Change progress bar action
+  function setProgressBar(curStep){
+    var percent = parseFloat(100 / steps) * curStep;
+    percent = percent.toFixed();
+    $(".progress-bar")
+      .css("width",percent+"%")
+      .html(percent+"%");   
+  }
+
+  
+});
+
+$( "#regiration_form" ).submit(function(event) {
+    jQuery('.alert-success').removeClass('hide').html( "Handler for .submit() called and see console logs for your posted variable" );
+    console.log($(this).serialize());
+    event.preventDefault();
+  });
+  $(".expandables h4").click(function() {
+ if ($(this).hasClass("expanded")) {
+      $(this).removeClass("expanded");
+      $(this).next().removeClass("expanded");
+    } else {
+      $(this).addClass("expanded");
+      $(this).next().addClass("expanded");
+    }
+});
+  $(".housediv .house-w").click(function() {
+ if ($(this).hasClass("expanded")) {
+      $(this).removeClass("expanded");
+      $(this).next().removeClass("expanded");
+    } else {
+      $(this).addClass("expanded");
+      $(this).next().addClass("expanded");
+    }
+	
+});
+
+  </script>
+   <script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.datepick.js"></script>
+<script>
+$(function() {
+	$('#rangeNoWeekendPicker').datepick({rangeSelect: true, 
+    onDate: $.datepick.noWeekends, showTrigger: '#calImg'});
+});
+
+function showDate(date) {
+	alert('The date chosen is ' + date);
+}
+</script>
+<script>
+	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
+
+{% endblock %}

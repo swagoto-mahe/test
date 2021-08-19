@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="{% static 'images/login_silder.jpg' %}" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Login</h1>
+            <a href="https://www.vitalforce.co.uk/order-our-staff">Book  a services </a> </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="login_page">
+    <div class="container">
+        <div class="row">
+         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+         <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 login">
+    <h2>Login Account</h2>
+  <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="inputslidercaption">Email <span>*</span></label>
+      <input type="email" name="email" class="form-control" value="" placeholder="Your email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" required="">
+       </div>
+    <div class="form-group">
+      <label for="inputslidercaption">Password <span>*</span></label>
+      <input type="password" class="form-control" name="password" value="" placeholder="Your password" required="">
+       </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+  </form>
+  <p>if you forgot your password? <a href="#">forgot password</a></p>
+  <p>Go Back? <a href="#">Home</a></p>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 create_a">
+	<h3>New to grow cleaners ? Create an account</h3>
+ <a href="{% url 'register' %}">Registration</a>
+</div>
+</div>
+</div>
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>  
+        </div>
+    </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+{% endblock %}

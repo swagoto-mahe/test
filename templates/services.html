@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="slider-inner">
+  
+    <ul class="rslides">
+   
+     <li><img src="{% static 'images/slider_inner4.jpg' %}" alt="">
+         
+         <div class="text_w">
+          <div class="container">
+            <div class="text_bg">
+              <h1>Services</h1>
+              <a href="{% static 'https://www.vitalforce.co.uk/order-our-staff' %}">Book  a services </a> </div>
+          </div>
+        </div>
+      </li>
+    
+       
+      
+  </ul>
+</section>
+
+<section class="inner_section">
+  
+    <section class="service_section">
+    
+     <div class="container">
+     <div class="row">
+       {% for post in post_list %}
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+      
+        <a href="{% url 'post_detail' post.slug  %}">
+          <img src="{{ post.image.url }}" alt="">
+          <div class="service_info">
+        <h5>{{ post.title }}</h5>
+        <p>Starting from <strong>${{ post.title_prices }}</strong></p>
+        <span class="service__arrow"> <svg version="1.1" xmlns="{% static 'http://www.w3.org/2000/svg' %}" xmlns:xlink="{% static 'http://www.w3.org/1999/xlink' %}" x="0px" y="0px" width="408px" height="408px" viewBox="0 0 408 408" style="enable-background:new 0 0 408 408;" xml:space="preserve"> <polygon points="204,0 168.3,35.7 311.1,178.5 0,178.5 0,229.5 311.1,229.5 168.3,372.3 204,408 408,204"></polygon> </svg> </span>
+        </div>
+        
+        </a>
+       
+      </div>
+        {% endfor %}
+      
+      
+
+     </div>
+     
+     </div>
+    </section>
+  
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+  <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        
+        
+        
+        
+       </div>  
+      </div>
+      
+
+  </section>
+  </div>
+  </div>
+</section>
+{% endblock %}

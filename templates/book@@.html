@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="slider-inner">
+  <ul class="rslides">
+    <li><img src="{% static 'images/login_silder.jpg' %}" alt="">
+      <div class="text_w">
+        <div class="container">
+          <div class="text_bg">
+            <h1>Book a services </h1>
+           
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="container_section">
+  <section class="book_page">
+   <div class="container"> 
+    <div class="row">
+       
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">	
+				 <div class="row">
+        
+                   <div class="progress">
+                   
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="alert alert-success hide"></div>
+  <form id="regiration_form" novalidate>
+  
+  <fieldset>
+   <h2>Book a service for your <b>Building/Office Sanitisation/Disinfectant</b></h2>
+  <div class="search">
+  <input type="search"   name="q" placeholder="Search..." autocomplete="off">
+      <ul class="search-ac">
+      <li><a href="{% static 'infectioncontrolcleaning.html' %}">Infection Control Cleaning</a></li>
+ <li><a href="{% static 'Builderscleaning.html' %}">Builders Cleaning</a></li>
+ <li><a href="{% static 'constructioncleaning.html' %}">Construction Cleaning</a></li>
+ <li><a href="{% static 'rubbishremoval.html' %}">Rubbish Removal</a></li>
+ <li><a href="{% static 'carpetcleaning.html' %}">Carpet Cleaning</a></li>
+ <li><a href="{% static 'upholsterycleaning.html' %}">Upholstery Cleaning</a></li>
+ <li><a href="{% static 'mattresscleaning.html' %}">Mattress Cleaning</a></li>
+ <li><a href="{% static 'commercialkitchencleaning.html' %}">Commercial Kitchen Cleaning</a></li>
+ <li><a href="{% static 'commercialkitchencanopycleaning.html' %}">Commercial Kitchen Canopy Cleaning</a></li>
+ <li><a href="{% static 'ovencleaning.html' %}">Oven Cleaning</a></li>
+ <li><a href="{% static 'endleasecleaning.html' %}">End of Lease Cleaning</a></li>
+ <li><a href="{% static 'guttercleaning.html' %}">Gutter Cleaning</a></li>
+ <li><a href="{% static 'highpressurecleaning.html' %}">High Pressure Cleaning</a></li>
+ <li><a href="{% static 'strippingsealingfloor.html' %}">Stripping and Sealing Floor</a></li>
+ <li><a href="{% static 'tilegroutcleaning.html' %}">Tile and Grout Cleaning</a></li>
+ <li><a href="{% static 'wallcleaning.html' %}">Wall Cleaning</a></li>
+ <li><a href="{% static 'windowcleaning.html' %}">Window Cleaning</a></li>
+ <li><a href="{% static 'highrisewindowscleaning.html' %}">High Rise Windows Cleaning</a></li>
+ <li><a href="{% static 'highhustingcleaning.html' %}">High Dusting & Cleaning</a></li>
+ <li><a href="{% static 'ventscleaning.html' %}">Vents Cleaning</a></li>
+ <li><a href="{% static 'factorycleaning.html' %}">Factory Cleaning</a></li>
+ <li><a href="{% static 'warehousecleaning.html' %}">Warehouse Cleaning</a></li>
+ <li><a href="{% static 'poolcleaning.html' %}">Pool Cleaning</a></li>
+ <li><a href="{% static 'gardenmowing.html' %}">Garden Mowing</a></li>
+ <li><a href="{% static 'one-Off-cleaning.html' %}">One-Off Cleaning</a></li>
+ <li><a href="{% static 'regularofficecleaning.html' %}">Regular Office Cleaning</a></li>
+        
+    </ul>
+  </div>
+    <div class="search_b">
+    <h6>Popular services</h6>
+    
+    <ul>
+    <li><a href="{% static 'booknew2.html' %}">End of Tenancy Cleaning</a></li>
+    <li><a href="{% static 'booknew2.html' %}">Domestic Cleaning</a></li>
+    <li><a href="{% static 'booknew2.html' %}">Carpet/Rug Cleaning</a></li>
+    <li><a href="{% static 'booknew2.html' %}">Oven/BBQ Cleaning</a></li>
+    <li><a href="{% static 'booknew2.html' %}">Antiviral Sanitisation</a></li>
+    <li><a href="{% static 'booknew2.html' %}">Garden Maintenance</a></li>
+    </ul>
+  </div>
+    <input type="button" name="password" class="next btn btn-info" value="Next" />
+  </fieldset>
+
+  <fieldset>
+ 
+    <div class="form-group">
+    <h2>Where should we serve you?</h2>
+ 
+  <div class="map">
+  <input type="text"   name="q" placeholder="Enter your postcode..." autocomplete="off">
+   
+         <a href="{% static 'booknew3.html' %}">Continue</a>
+  </div>
+    <div class="search_b">
+ <p> Find out if our service is available in your area.</p>
+  </div>
+    
+    </div>
+   
+    <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+    <input type="button" name="next" class="next btn btn-info" value="Next" />
+  </fieldset>
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>What is the type of your enquiry?	</h2>
+ 
+  <div class="radio">
+
+
+   <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Commercial Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" id="radio2" />
+  <label for="radio2">Domestic Cleaning</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" id="radio3" />
+  <label for="radio3">Residential Cleaning</label>
+</div>
+        
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+ <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services">
+   <span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   
+   </div>
+   
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  
+   <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Do you want this Infection Control Cleaning services ?	</h2>
+ 
+  <div class="radio">
+
+
+   <div class="flex">
+  <input type="radio" name="radio" id="radio1" />
+  <label for="radio1">Yes</label>
+</div>
+<div class="flex">
+  <input type="radio" name="radio" id="radio2" />
+  <label for="radio2">No, thank you</label>
+</div>
+
+        
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   
+   </div>
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+  
+   <h2>Is there anything else you'd like us to know?</h2>
+ 
+  <div class="radio">
+
+ <textarea name="" cols="" rows=""></textarea>
+  </div>
+   
+  </div>
+  
+  </div>
+  
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+   <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   
+   
+   </div>
+
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  
+  <fieldset>
+   <div class="row">
+
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+     <div class="form-group">
+ 
+  <div class="calendar_w">
+  <input type="text" id="rangeNoWeekendPicker">
+  <div class="form-heading">
+  <span> Saturday, jul 10 </span><span>Standard price</span><span>Fantastic Club price</span>
+  </div>
+  </div>
+  
+  
+    <div class="form-headingsub">
+    <ul>
+    <li> <span>  07:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  08:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  09:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  10:00  </span><span><a class="act" href="#"> $255</a> </span><span><a class="act" href="#"> $215 <b>+ EARN $360</b> </a></span></li>
+    <li> <span>  11:00  </span><span><a class="act" href="#"> n/a </a></span><span><a class="act" href="#"> $215 <b>+ EARN $360</b></a></span></li>
+    <li> <span>  13:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  11:00  </span><span><a class="act" href="#"> n/a </a></span><span><a class="act" href="#"> $215 <b>+ EARN $360</b> </a></span></li>
+    <li> <span>  15:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  16:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  17:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    <li> <span>  18:00  </span><span><a class="un_act" href="#">Fully booked</a></span><span><a class="un_act" href="#">Fully booked</a></span></li>
+    </ul>
+ 
+  </div>
+   
+  </div>
+  
+  </div>
+   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+  <div class="book-right-top">
+  <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+   <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Postcode: 3000</span></div>
+   <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+   <h4>The service includes:</h4>
+   <p>Commercial Cleaning</p>
+   <p> Yes </p>
+   </div>
+    <div class="services"><span><i class="fa fa-calendar" aria-hidden="true"></i> </span>
+   <h4> Appointment time :</h4>
+   <p>13:00, Tuesday, Aug 03</p>
+   
+   </div>
+    <div class="services-price">Service price <span>$255</span></div>
+     <div class="total-price">Total <span>$255</span></div>
+   
+  
+   
+   
+   </div>
+   
+   <div class="expandables">
+	
+    <h4>The service includes:</h4>
+  <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+</blockquote>     
+   
+    <h4>NOTE:</h4>
+  <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+</blockquote>     
+    
+   
+</div>
+   </div>
+   </div>
+ 
+   <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+   <input type="button" name="next" class="next btn btn-info" value="Next" />
+  
+  </fieldset>
+  </form>     
+                       
+                       
+				</div>
+                
+</div>
+      
+        </div>
+        </div>
+  </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  <section class="testimonial_section">
+    <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+            nonummy nibh euismod tincidunt </p>
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

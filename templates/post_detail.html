@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="slider-inner">
+
+    <ul class="rslides">
+   
+     <li><img src="{% static 'images/slider_inner6.jpg' %}" alt="">
+         
+         <div class="text_w">
+          <div class="container">
+            <div class="text_bg">
+              <h1>Services</h1>
+              <a href="https://www.vitalforce.co.uk/order-our-staff">Book  a services </a> </div>
+          </div>
+        </div>
+      </li>
+    
+       
+      
+  </ul>
+</section>
+
+<section class="inner_section">
+
+    <section class="service_section">
+     <div class="container">
+     
+     
+     <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<h2>{% block title %} {{ object.title }} {% endblock title %}</h2>
+    <p>{{ post.content }}</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <img src="{{ post.image.url }}" alt="">
+    </div>
+   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <ul>
+ {% if post.ul_1|length > 1 %}
+        <li>{{ post.ul_1 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_2|length > 1 %}
+        <li>{{ post.ul_2 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_3|length > 1 %}
+        <li>{{ post.ul_3 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_4|length > 1 %}
+        <li>{{ post.ul_4 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_5|length > 1 %}
+        <li>{{ post.ul_5 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_6|length > 1 %}
+        <li>{{ post.ul_6 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_7|length > 1 %}
+        <li>{{ post.ul_7 }}</li>
+        {% else %}
+
+        {% endif %}
+        {% if post.ul_8|length > 1 %}
+        <li>{{ post.ul_8 }}</li>
+        {% else %}
+
+        {% endif %} 
+    
+    </ul>
+    </div>
+      
+     </div>
+      <div class="row service_icon">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p>{{ post.contaners }}</p>
+      </div>
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+     <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        {% if post.experienced_s_images %}
+       <img src="{{ post.experienced_s_images.url }}" alt="">
+        {% endif %}
+     </div>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+     <h4>{{ post.experienced_staff_1 }}</h4>
+<p>{{ post.experienced_staff_description_1 }}</p>
+     </div>
+     </div>
+         
+    
+    </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+     <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        {% if post.experiencedimg %}
+       <img src="{{ post.experiencedimg.url }}" alt="">
+        {% endif %}
+     </div>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+     <h4>{{ post.experienced_staff_2 }}</h4>
+<p>{{ post.experienced_staff_description_2 }}</p>
+     </div>
+     </div>
+         
+    
+    </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+     <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        {% if post.experiencedsta_imagessss %}
+       <img src="{{ post.experiencedsta_imagessss.url }}" alt="">
+        {% endif %}
+     </div>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+     <h4>{{ post.experienced_staff_3 }}</h4>
+<p>{{ post.experienced_staff_description_3 }}</p>
+     </div>
+     </div>
+         
+    
+    </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+     <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        {% if post.experienced_stafimagess %}
+       <img src="{{ post.experienced_stafimagess.url }}" alt="">
+        {% endif %}
+     </div>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+     <h4>{{ post.experienced_staff_4 }}</h4>
+<p>{{ post.experienced_staff_4_description }}</p>
+     </div>
+     </div>
+         
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+      </div>
+     </div>
+    </section>
+  
+  <section class="book-section"> 
+  <div class="container"> 
+  <div class="row"> 
+  <div class="col-sm-12 col-xs-12"> 
+  <h2>Ready to book with us?</h2> 
+  <div class="section-cta-parent"> 
+  <a href="#" rel="nofollow" class="btn filled book-btn" data-book-btn="true" title="Book now"> Book a services </a> 
+  <a href="#" rel="nofollow" class="btn btn-white" title="Contact us"> Request a Quote </a> 
+  </div> </div> </div> </div> </section>
+  
+  
+  
+  <section class="testimonial_section">
+  <div class="testimonial_box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        <div class="item">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt  Lorem ipsum dolor sit amet,  
+nonummy nibh euismod tincidunt </p>
+          
+          <div class="testimonial-author">DATA AGENT</div>
+        </div>
+        
+        
+        
+        
+       </div>  
+      </div>
+      
+
+  </section>
+  </div>
+  </div>
+</section>
+{% endblock %}

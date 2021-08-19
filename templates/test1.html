@@ -1,0 +1,73 @@
+<fieldset id="enqury">
+    <div class="row">
+
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+      <div class="form-group">
+    
+    <h2>What is the type of your enquiry?	</h2>
+    
+    <div class="radio">
+
+      <div class="submit">
+        <p>
+          <label> Your name</label>
+          <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+           </p>
+        <p>
+          <label> Your address</label>
+          <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+        </p><br><br>
+        <p><input type="submit" value="Submit" class="from_submit"></p>
+      </div> 
+          
+    </div>
+      </div>
+      
+      </div>
+      
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div  class="book-right-top">
+      <div class="book-banner"><img src="{% static 'images/banner-card.png' %}" alt=""></div>
+      <div class="post-code"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span  id="postcode_last"></span></div>
+      <div class="services">
+      <span><i class="fa fa-book" aria-hidden="true"></i> </span>
+
+      <h4>The service includes:</h4>
+      <p id="hel3"></p>
+      </div>
+      <div class="services"><span><i class="fa fa-book" aria-hidden="true"></i> </span>
+      <h4>Infection Control Cleaning Service:</h4>
+      <p id ="hel4"></p>
+      </div>
+      <div class="services"><span><i class="fa fa-calendar" aria-hidden="true"></i> </span>
+      <h4> Appointment time :</h4>
+      <p id="time_show"></p>
+      
+      </div>
+        <div class="services-price" >Service price <span id="price"></span></div>
+        <div class="total-price">Total <span id="price2"></span></div>
+      
+      
+      
+      
+      </div>
+      
+      <div class="expandables">
+      
+        <h4>The service includes:</h4>
+      <blockquote><p>As we are currently undergoing extensive research, when new products become available we will be introducing them on our website and also to the general public.</p>
+    </blockquote>     
+      
+        <h4>NOTE:</h4>
+      <blockquote><p>All our packaging materials are recyclable. Recycling helps to reduce waste and greenhouse gases. You too can make a difference by recycling your used packages.</p>
+    </blockquote>     
+        
+      
+    </div>
+      </div>
+      </div>
+
+      <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+      <input type="button" name="next" class="next btn btn-info" onClick="lastcall2()" value="Next" />
+
+</fieldset>
